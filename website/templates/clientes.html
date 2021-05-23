@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Website - Clientes Cadastrados{% endblock %}
+
+{% block content %}
+<br>
+<h1 align="center">Clientes Cadastrados</h1>
+<br>
+
+<table class="table align-middle">
+    <thead>
+        <tr>
+            {%for title in titles %}
+                <th>{{title.title()}}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for index, row in df.iterrows() %}
+            <tr>
+                {%for title in titles %}
+                    <td>{{row[title]}}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

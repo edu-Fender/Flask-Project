@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}Website{% endblock %}
+
+{% block content %}
+<br>
+<h1 align="center">Consulta CEP</h1>
+
+<form method="POST">
+    <div class="container">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" class="form-control">
+                </div>
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Consultar</button>
+    </div>
+</form>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <label for="cep">CEP:</label>
+        </div>
+        <div class="col-8">
+            <label for="cep_result">{{ cep }}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <label for="logradouro">Logradouro:</label>
+        </div>
+        <div class="col-8">
+            <label for="logradouro_result">{{ logradouro }}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <label for="complemento">Complemento:</label>
+        </div>
+        <div class="col-8">
+            <label for="complemento_result">{{ complemento }}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <label for="bairro">Bairro:</label>
+        </div>
+        <div class="col-8">
+            <label for="bairro_result">{{ bairro }}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <label for="localidade">Localidade:</label>
+        </div>
+        <div class="col-8">
+            <label for="localidade_result">{{ localidade }}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <label for="uf">UF:</label>
+        </div>
+        <div class="col-8">
+            <label for="uf_result">{{ uf }}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <label for="ibge">IBGE:</label>
+        </div>
+        <div class="col-8">
+            <label for="ibge_result">{{ ibge }}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <label for="gia">GIA:</label>
+        </div>
+        <div class="col-8">
+            <label for="gia_result">{{ gia }}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <label for="ddd">DDD:</label>
+        </div>
+        <div class="col-8">
+            <label for="ddd_result">{{ ddd }}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <label for="siafi">Siafi:</label>
+        </div>
+        <div class="col-8">
+            <label for="siafi_result">{{ siafi }}</label>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

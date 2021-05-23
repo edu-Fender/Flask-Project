@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Website{% endblock %}
+
+{% block content %}
+<br>
+<h1 align="center">Cadastrar novo cliente</h1>
+
+<form method="POST">
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="email@email.com">
+            </div>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="cep" class="form-control" id="cep" name="cep" placeholder="CEP">
+            </div>
+        </div> 
+    </div>
+    <br />
+    
+    <button type="submit" class="btn btn-primary">Concluir</button>
+</form>
+
+
+{% endblock %}
