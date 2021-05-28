@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Website - Login{% endblock %}
+
+{% block content %}
+<br>
+<h1 align="center">Cadastro</h1>
+<br>
+
+<div class="container">
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Cadastre-se hoje!</legend>
+            {{ form.csrf_token }}
+            <div class="form-group">
+                {{ form.usuario.label(class="form-control-label")}}
+                {{ form.usuario(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label(class="form-control-label")}}
+                {{ form.email(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.senha.label(class="form-control-label")}}
+                {{ form.senha(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.confirmar_senha.label (class="form-control-label")}}
+                {{ form.confirmar_senha(class="form-control form-control-lg") }}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.enviar (class="btn btn-outline-info")}}
+        </div>
+    </form>
+<div>
+    <small class="text-muted">
+        Já tem uma conta? <a class="ml-2" href="{{ url_for('.login') }}"> Clique aqui! </a>
+    </small>
+</div>
+</div>
+
+{% endblock %}
