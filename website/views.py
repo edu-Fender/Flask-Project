@@ -8,6 +8,7 @@ import requests
 import pandas as pd
 import numpy as np
 import re
+from .forms import Registrar, Login
 
 views = Blueprint('views', __name__)
 
@@ -22,6 +23,22 @@ def home():
     Não é necessário modificar nada nessa função
     """
     return render_template('home.html')
+
+@views.route('/registrar', methods=['GET', 'POST'])
+def registrar():
+    form = Registrar()
+    if form.validate_on_submit():
+        flash('Cadastrado kkk!.')
+        return redirect(url_for('.home'))
+    return render_template('registrar.html', tittle='kkkaa', form=form)
+
+@views.route('/login', methods=['GET', 'POST'])
+def login():
+    form = Login()
+    if form.validate_on_submit():
+        flash('Logado kkk!.')
+        return redirect(url_for('.home'))
+    return render_template('login.html', tittle='logiunnn', form=form)
 
 @views.route('/clientes')
 def clientes():
