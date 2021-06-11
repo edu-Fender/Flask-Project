@@ -1,0 +1,6 @@
+###############################################################################
+# Show Python as major language on GitHub.
+###############################################################################
+
+*.html linguist-vendored
+*.html linguist-detectable=false
